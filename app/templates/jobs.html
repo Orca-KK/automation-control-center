@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="card">
+  <h1>Automation Jobs</h1>
+
+  <h2>Create New Job</h2>
+  <form id="createJobForm">
+    <label>Name:</label><br />
+    <input id="name" type="text" required /><br /><br />
+
+    <label>Description:</label><br />
+    <textarea id="description" rows="3"></textarea><br /><br />
+
+    <label>Schedule:</label><br />
+    <input id="schedule" type="text" value="every_5_minutes" required /><br /><br />
+
+    <label>Job Type:</label><br />
+    <input id="job_type" type="text" value="http_ping" required /><br /><br />
+
+    <label>Target (URL or script path):</label><br />
+    <input id="target" type="text" value="https://example.com" /><br /><br />
+
+    <label>
+      <input id="is_active" type="checkbox" checked />
+      Active
+    </label>
+    <br /><br />
+
+    <button type="submit">Create Job</button>
+  </form>
+
+  <hr />
+
+  <h2>Existing Jobs</h2>
+  <button id="refreshJobsBtn" type="button">Refresh Jobs</button>
+
+  <table style="width: 100%; margin-top: 12px;">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Schedule</th>
+        <th>Active</th>
+        <th>Target</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="jobs-body">
+      <tr><td colspan="7">Loading jobs…</td></tr>
+    </tbody>
+  </table>
+
+  <p style="margin-top: 10px;">
+    Tip: Open logs at <a href="/jobs/logs/ui">/jobs/logs/ui</a>
+  </p>
+</div>
+
+<script src="/static/jobs.js"></script>
+{% endblock %}

@@ -1,0 +1,20 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtualenv
+venv/
+
+# VS Code / IDE
+.vscode/
+.idea/
+
+# Local DB / logs
+automation.db
+*.sqlite
+*.sqlite3
+*.log
+
+# OS
+.DS_Store

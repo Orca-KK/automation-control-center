@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Job Logs</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/logs.js" defer></script>
+</head>
+<body>
+<header class="top-bar">
+    <div class="logo">Automation Control Center</div>
+</header>
+
+<main class="content">
+    <h1>Job Logs</h1>
+
+    <section>
+        <p>Showing the most recent job runs.</p>
+        <button id="refresh-logs-btn" type="button">Refresh Logs</button>
+        <table style="margin-top: 1rem; width: 100%; border-collapse: collapse;">
+            <thead>
+            <tr>
+                <th style="text-align:left;">ID</th>
+                <th style="text-align:left;">Job ID</th>
+                <th style="text-align:left;">Status</th>
+                <th style="text-align:left;">Started At</th>
+                <th style="text-align:left;">Output</th>
+            </tr>
+            </thead>
+            <tbody id="logs-tbody">
+            <!-- Logs will be injected here by JS -->
+            </tbody>
+        </table>
+    </section>
+</main>
+
+<footer class="footer">
+    <small>&copy; Automation Control Center – learning project</small>
+</footer>
+</body>
+</html>
